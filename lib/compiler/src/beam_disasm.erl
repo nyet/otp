@@ -185,7 +185,7 @@ process_chunks(F) ->
 	    Attributes = optional_chunk(F, attributes),
 	    CompInfo = 
 		case optional_chunk(F, "CInf") of
-		    none -> none;
+		    none -> [];
 		    CompInfoBin when is_binary(CompInfoBin) ->
 			binary_to_term(CompInfoBin)
 		end,
